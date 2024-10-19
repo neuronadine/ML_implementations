@@ -21,6 +21,35 @@ class Histogram2DClassifier:
 
     Author : Nadine Mohamed
     Date : October 19, 2024
+
+    Additional Information:
+    -----------------------
+    (A) Complexity:
+        - Training complexity: O(N), where N is the number of training samples.
+        - Prediction complexity: O(1).
+
+    (B) Parametric vs. Non-parametric:
+        - This is a non-parametric classifier. It does not assume any specific
+          form for the underlying data distribution. Instead, it estimates the
+          distribution based on the counts within each bin.
+
+    (C) Classes:
+        - Supports binary or multiclass classification.
+
+    (D) Hyperparameters:
+        - m1, m2: Number of bins for each dimension (feature).
+        - x1min, x1max: Range for the first feature.
+        - x2min, x2max: Range for the second feature.
+        - nclasses: The number of distinct classes.
+
+    (E) Limitations:
+        - Sensitive to the choice of bin sizes (m1 and m2).
+          If bins are too large, important details may be lost; if too small,
+          the classifier may overfit.
+        - Not suitable for high-dimensional data due to curse of dimensionality.
+        - Requires careful selection of the range for each feature.
+        - May struggle with smooth decision boundaries, as the model is based
+          on discrete bins.
     """
 
     def __init__(self, m1, x1min, x1max, m2, x2min, x2max, nclasses):
