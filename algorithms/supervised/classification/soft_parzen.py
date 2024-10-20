@@ -1,4 +1,5 @@
 import numpy as np
+from ....utils.distance_metrics import manhattanL1
 
 
 class SoftRBFParzen:
@@ -14,7 +15,7 @@ class SoftRBFParzen:
         classes_pred = np.zeros(num_test)
 
         for i, test_point in enumerate(test_data):
-            distances = np.sum(np.abs(test_point - self.train_inputs), axis=1)
+            distances = manhattanL1(self.train_inputs - test_point)
             weights = np.exp(-(distances**2) / (2 * self.sigma**2))
             label_weights = np.bincount(self.train_labels, weights=weights)
             classes_pred[i] = np.argmax(label_weights)

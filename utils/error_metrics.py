@@ -1,55 +1,5 @@
 import numpy as np
 
-# Minkowski
-def minkowski(x,y,p=2):
-  return np.sum(np.abs(x-y)**p)**(1/p)
-
-def minkowski_mat(X,y,p=2):
-  return np.sum(np.abs(X-y)**p, axis=1)**(1/p)
-
-# Manhattan
-def manhattanL1(X, y):
-    return np.sum(np.abs(X - y), axis=1)
-
-# Euclidean
-
-# Tanimoto
-
-def random_projections(X, A):
-    return (1 / np.sqrt(2)) * np.dot(X, A)
-
-def draw_rand_label(x, label_list):
-    seed = abs(np.sum(x))
-    while seed < 1:
-        seed = 10 * seed
-    seed = int(1000000 * seed)
-    np.random.seed(seed)
-    return np.random.choice(label_list)
-
-
-def feature_means(self, iris):
-    return iris[:, :4].mean(axis=0)
-
-def empirical_covariance(self, iris):
-    return np.cov(iris[:, :4], rowvar=False)
-
-def feature_means_class_1(self, iris):
-    iris_class_1 = iris[iris[:, 4] == 1]
-    return self.feature_means(iris_class_1)
-
-def empirical_covariance_class_1(self, iris):
-    iris_class_1 = iris[iris[:, 4] == 1]
-    return self.empirical_covariance(iris_class_1)
-
-
-def split_dataset(iris):
-    n = iris.shape[0]
-    train = iris[(np.arange(n)%5 <= 2)]
-    validation = iris[(np.arange(n)%5 == 3)]
-    test = iris[(np.arange(n)%5 == 4)]
-    return train, validation, test
-
-
 class ErrorRate:
     def __init__(self, x_train, y_train, x_val, y_val):
         self.x_train = x_train
