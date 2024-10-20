@@ -1,0 +1,2 @@
+
+- review the multivariate gaussian formula and understand intuition
