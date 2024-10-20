@@ -1,0 +1,22 @@
+feat: A new feature
+fix: A bug fix
+docs: Documentation changes
+style: Changes in formatting, linting, or whitespace (no code changes)
+refactor: Code changes that neither add a feature nor fix a bug
+test: Adding or updating tests
+chore: Maintenance tasks (e.g., updating dependencies)
+
+
+state of the working tree using:
+```
+git status
+```
+To view a linear history of commits, use:
+```
+git log
+```
+
+For a more visual representation of the commit tree, you can use:
+```
+git log --graph --oneline --decorate
+```

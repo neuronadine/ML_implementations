@@ -1,5 +1,5 @@
 import numpy as np
-from ....utils import draw_rand_label
+from ....utils.randomization import draw_rand_label
 
 
 class HardParzen:
