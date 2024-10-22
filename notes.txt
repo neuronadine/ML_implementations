@@ -1,2 +1,3 @@
 
 - review the multivariate gaussian formula and understand intuition
+- implement cross validation in dataset_utilskaggle competitions download -c classer-le-text
