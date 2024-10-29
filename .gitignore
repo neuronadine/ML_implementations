@@ -155,7 +155,7 @@ dmypy.json
 cython_debug/
 
 # Ignore all files in the data folder
-data/
+data/*
 
 
 # PyCharm
