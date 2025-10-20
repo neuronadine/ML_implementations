@@ -154,8 +154,26 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Ignore all files in the data folder
-data/*
+# Ignore data folders and all contents
+data/
+*/data/
+**/data/**
+
+# Ignore experiment outputs, logs, checkpoints, and generated results
+experiments/
+*/experiments/
+**/experiments/**
+
+# Ignore temporary models, weights, or large artifacts
+checkpoints/
+runs/
+outputs/
+*.pt
+*.pth
+*.h5
+*.npz
+*.pkl
+*.csv
 
 
 # PyCharm
@@ -165,4 +183,4 @@ data/*
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# ignore largee files : 
+# ignore large files : 
